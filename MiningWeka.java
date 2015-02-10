@@ -19,9 +19,9 @@ public static void main(String args[]) throws IOException {
 	        ArrayList<String> listArray = new ArrayList<String>();
 	        while(scanner.hasNextLine()){
 	            String line = scanner.nextLine();
-	            String end = "'," + line.substring(line.lastIndexOf(" ")+1);
+	            String end = "\"," + line.substring(line.lastIndexOf(" ")+1);
 	            line = line.replaceAll(" [^ ]+$", "");
-	            String result ="'" + line + end;
+	            String result ="'\"" + line + end;
 	            
 	            listArray.add(result);
 	            String listString = "";
