@@ -5,3 +5,14 @@ For more information, please refer to the paper.
 
 Below please find a short description of each file.
 
+Each patient record consists of the text file ( record-**.txt) and a list of annotations on which text chunks refer to problems, tests and treatments (record-**.con). 
+
+MiningConcepts contains 4 functions: The first one converts record-13.con to con-13.txt. The second then turns con-13.txt into conlist-13.txt, which is a CSV file containing the concepts in IOB format. The third function converts record-**.txt to text-**.txt, which is a file that puts every word on a separate line. The final function combines conlist-**.txt and text-**.txt and creates a CSV file with each word in the patient record on a separate line, and the concepts in the next column. This file is called output-**.txt.
+
+The python files create additional layers to the input, which results in machine learning input for Weka. POS-tags and chunks are currently displayed in the additional layers.
+
+The complete files (output-**.txt) are converted to weka-readable input, called weka-**.txt. This is done in MiningWeka.
+
+The file AppendFiles takes in the input generated in the java code, and the layers of annotation in the python code. The python code has generated files called record-**.txtprocessed.txt, and these files are appended with wekaInput.csv.
+
+
