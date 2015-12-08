@@ -1,0 +1,7 @@
+MiningPatientRecords is a project done for the research project Mining Causal Graphs from Patient Records: A Feasibility Study.
+The project uses three files to format input from the initial patient record and its corresponding annotation file to Weka-readable input.
+It uses the python files in the folder to annotate the text files with additional layers.
+For more information, please refer to the paper.
+
+Below please find a short description of each file.
+
